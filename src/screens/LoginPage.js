@@ -23,7 +23,7 @@ export default function LoginPage() {
                     source={google}
                     style={{ width: 20, height: 20, marginRight: 10 }}
                 />
-                <Text style={{ color: 'white' }}>
+                <Text style={{ color: 'white', textAlign: 'center'}}>
                     Entrar com Google
                 </Text>
             </TouchableOpacity>
@@ -45,8 +45,9 @@ const styles = StyleSheet.create({
     botaoGoogle: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'start',
         borderWidth: 1,
+        gap: 60,
         borderColor: '#000',
         padding: 15,
         borderRadius: 5,
