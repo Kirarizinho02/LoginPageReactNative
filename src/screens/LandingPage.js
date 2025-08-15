@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, Pressable, TouchableOpacity } from 'reac
 import google from '../assets/Google.png'
 import casual_dog from '../assets/casual_dog.png'
 
-export default function LoginPage() {
+export default function LandingPage({ navigation }) {
     return (
         <View style={styles.container}>
             <Image
@@ -27,7 +27,7 @@ export default function LoginPage() {
                     Entrar com Google
                 </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.botaoOutrasOpcoes}>
+            <TouchableOpacity style={styles.botaoOutrasOpcoes} onPress={() => navigation.navigate('CommonLogin')}>
                 <Text>Outras opções</Text>
             </TouchableOpacity>
 
@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
         justifyContent: 'start',
         borderWidth: 1,
         gap: 60,
-        borderColor: '#000',
+        borderColor: '#10eb4b',
         padding: 15,
         borderRadius: 5,
         marginTop: 20,
-        backgroundColor: "#10eb4b",
+        backgroundColor: '#10eb4b',
         width: '80%',
     },
     botaoOutrasOpcoes: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderWidth: 1,
-        borderColor: '#000',
+        borderColor: '#10eb4b',
         padding: 15,
         borderRadius: 5,
         marginTop: 20,
@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
         fontSize: 40,
         fontWeight: 'bold',
         marginBottom: 10,
-        fontFamily: 'LucidaSans'
     },
     h2: {
         fontSize: 14,
